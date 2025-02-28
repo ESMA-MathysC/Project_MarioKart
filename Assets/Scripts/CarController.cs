@@ -10,29 +10,15 @@ public class CarController : MonoBehaviour
     private Rigidbody _rb;
 
     [SerializeField]
-    private float _speed, _maxSpeed, _backwardsSpeed, _maxBackwardsSpeed, _accelerationFactor, _accelerationFactorLerpInterpolator, _decelerationFactor, _rotationSpeed, _rotationFactor;
+    private float _speed, _maxSpeed, _accelerationFactor, _accelerationFactorLerpInterpolator, _decelerationFactor, _rotationSpeed, _rotationFactor;
     private bool _isAccelerating, _isGoingBackwards;
 
     [SerializeField]
     private AnimationCurve _accelerationCurve;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
-        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~TURNING~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.eulerAngles -= Vector3.up *_rotationSpeed * Time.deltaTime * _rotationFactor;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.eulerAngles += Vector3.up*_rotationSpeed * Time.deltaTime * _rotationFactor;
-        }
 
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~FORWARD MOVEMENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -62,18 +48,11 @@ public class CarController : MonoBehaviour
         if (_isAccelerating)
         {
             _accelerationFactorLerpInterpolator += _accelerationFactor;
-            //_speed = Mathf.Clamp(_speed + _accelerationFactor * Time.fixedDeltaTime, 0, _maxSpeed );
         }
         else
         {
             _accelerationFactorLerpInterpolator -= _accelerationFactor*_decelerationFactor;
-
         }
-
-        /*if (_isGoingBackwards)
-        {
-         
-        }*/
 
         _accelerationFactorLerpInterpolator = Mathf.Clamp01(_accelerationFactorLerpInterpolator);
 
@@ -81,5 +60,15 @@ public class CarController : MonoBehaviour
 
         _rb.MovePosition(transform.position + transform.forward * _speed * Time.fixedDeltaTime);
 
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~TURNING~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.eulerAngles -= Vector3.up * _rotationSpeed * Time.deltaTime * _rotationFactor;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.eulerAngles += Vector3.up * _rotationSpeed * Time.deltaTime * _rotationFactor;
+        }
     }
 }

@@ -5,15 +5,10 @@ using UnityEngine;
 public class SpeedBoostPickup : MonoBehaviour
 {
     private CarController _car;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        _car.speed = _car.speed * 2;
+        Destroy(gameObject);
     }
 }

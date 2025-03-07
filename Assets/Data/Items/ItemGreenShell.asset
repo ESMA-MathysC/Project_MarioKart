@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4517839f3120984ea00e3e758d9baee, type: 3}
   m_Name: ItemGreenShell
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
-  itemName: 
+  itemSprite: {fileID: 21300000, guid: 6c5bdf7d9e2cdc2439808d3ee6513cae, type: 3}
+  itemName: Green Shell
   itemUseCount: 1
+  objectToLaunch: {fileID: 6452385925676662310, guid: ac965647ccfe0a6478745a203d0c5d52,
+    type: 3}

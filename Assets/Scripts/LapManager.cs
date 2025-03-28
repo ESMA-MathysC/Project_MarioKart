@@ -29,11 +29,10 @@ public class LapManager : MonoBehaviour
         if (_checkpoints.Count > _numberOfCheckpoints / 2)
         {
             _lapCount++;
-            Debug.Log("lap finiqhed, entering lap "+_lapCount);
             _checkpoints.Clear();
             if (_lapCount >= 3)
             {
-                Debug.Log("GG WP");
+
             }
         }
     }

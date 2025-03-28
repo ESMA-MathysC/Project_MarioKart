@@ -3,11 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ItemLaunchable", menuName = "Scriptable Objects/ItemLaunchable")]
 public class ItemLaunchable : Item
 {
-    public GameObject objectToLaunch;
+    public GameObject objectToSpawn;
 
     public override void Activation(PlayerItemManager player)
     {
-        Debug.Log(objectToLaunch.name + " has been thrown");
-        Instantiate(objectToLaunch); //instance le préfab de la carapace
+        Instantiate(objectToSpawn, player.carController.backSpawner.transform.position, player.carController.backSpawner.transform.rotation); //instance le préfab de la peau de banane
     }
 }

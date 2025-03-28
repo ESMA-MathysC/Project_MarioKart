@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6367247795085532701}
   - component: {fileID: 4283849582375079816}
   m_Layer: 0
-  m_Name: Kart
+  m_Name: Kart_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,9 +17,14 @@ public class PlayerItemManager : MonoBehaviour
     [SerializeField]
     private int _numberOfItemUse; //permet de savoir combien d'utilisations il reste à l'item actuel
 
+    [SerializeField]
+    private KeyCode _useObject;
+
+    public CarController carController;
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X)) //input utilisé afin d'activer l'objet actuel
+        if (Input.GetKeyDown(_useObject)) //input utilisé afin d'activer l'objet actuel
         {
             UseItem(); //déclenchement de la méthode d'activation d'items
         }

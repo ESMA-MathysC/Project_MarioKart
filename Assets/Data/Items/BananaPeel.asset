@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4517839f3120984ea00e3e758d9baee, type: 3}
+  m_Name: BananaPeel
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: 21300000, guid: cc198b0a4e656f443a33885a879b31e4, type: 3}
+  itemName: Banana Peel
+  itemUseCount: 1
+  objectToSpawn: {fileID: 4199271709578838299, guid: 0da2e37a46aa2b345b4a20d7c85f3094,
+    type: 3}

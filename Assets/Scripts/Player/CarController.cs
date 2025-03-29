@@ -122,8 +122,5 @@ public class CarController : MonoBehaviour
         {
             transform.eulerAngles += Vector3.up * _rotationSpeed * Time.deltaTime * _rotationFactor;
         }
-
-
-
     }
 }
